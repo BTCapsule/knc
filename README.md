@@ -15,17 +15,21 @@ Bob has 100 BTC he wants to sell. No contract is required. Bob simply advertises
 
 When Alice wants to buy, she requests 5 BTC from Bob and waits for him to respond. Bob sees the 10 BTC collateral and decides to complete the transaction.
 
-Bob will lock 5 BTC into a bitVM contract, and Alice will enter that contract with her own 5 BTC. Alice pays Bob for his 5 BTC, Bob confirms the payment, and Alice receives 5 BTC and her collateral back. This is the happy path.
+Bob will lock 10 BTC into a bitVM contract, 5 BTC for collateral and 5 BTC to sell. Alice will enter that contract with her own 5 BTC. Alice pays Bob for 5 BTC and Bob confirms the payment. Alice receives 5 BTC and her collateral back, and Bob receives his collateral back. This is the happy path.
 
 ## The Sad Path
 
 If there is a dispute from either party, they will initiate an expensive game that will keep them honest.
 
-If Alice requests 5 BTC from Bob and fulfills her end, but Bob does not lock 5 BTC into the contract, then obviously this deal is over. 
+If Alice requests 5 BTC from Bob and fulfills her end, but Bob does not lock enough BTC into the contract, then Alice can cancel the deal. 
 
-If Bob does lock 5 BTC into the contract, but Alice does not pay, then Bob can challenge. If Alice does not respond, then Bob gets his 5 BTC back and the deal is over.
+If Bob does lock 10 BTC into the contract, but Alice does not pay, then Bob can challenge. If Alice does not respond, then Bob gets his 10 BTC back and the deal is over.
 
-If Alice responds with her own challenge (claiming that she did pay and Bob is lying), this will slash funds from her collateral, and Bob’s 5 BTC is stuck in the contract. Bob can admit he was lying, or he can counter challenge, slashing funds from his 5 BTC. 
+If Alice responds with her own challenge (claiming that she did pay and Bob is lying), this will slash funds from her collateral, and the 5 BTC purchase is stuck in the contract. Bob can admit he was lying, or he can counter challenge, slashing funds from his own collateral. 
 
-This game can go back and forth until someone admits they are lying, or they both lose all their money. Basically a very expensive game of chicken.
+This game can go back and forth until someone admits they are lying, or they both lose all their money. The 5 BTC that was meant to be purchased will go to the miners. 
+
+So in the worst case, Bob is short 10 BTC and Alice is short 5 BTC + the payment (equal to 5 BTC) and nobody is happy.
+
+Basically a very expensive game of chicken.
 
