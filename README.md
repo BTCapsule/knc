@@ -33,3 +33,20 @@ So in the worst case, Bob is short 10 BTC and Alice is short 5 BTC + the payment
 
 Basically a very expensive game of chicken.
 
+
+## Buyer Collateral Options
+
+The buyer collateral protects the buyer by giving them funds to challenge with. The initial collateral can be KYC, or this could be added to existing non-KYC exchanges for extra security.
+
+However, all the numbers above are arbitrary. People can choose their own risk, and the collateral can be chosen by the relevant parties.
+
+Suppose Alice buys 2 BTC from a friend for cash, and wants to purchase 5 BTC from a KNC exchange. She could make a request for 5 BTC, Bob will see her 2 BTC, and match it in the contract.
+
+In this way, each 2 BTC could be used to challenge the other until the funds are empty. If the dispute is not settled, Bob will receive 3 BTC back from the purchased BTC, and Alice will get nothing.
+
+This would lead to a total loss of 4 BTC for Bob, and either 2 BTC (if Alice is evil), or 2 BTC + the price of 5 BTC if Alice is honest. 
+
+This means the seller always has the same risk factor (losing 2x collateral), but if the buyer pays, they have an additional risk of losing the value of 2x collateral + the price of the unsecured BTC. 
+
+
+
