@@ -36,17 +36,18 @@ Basically a very expensive game of chicken.
 
 ## Buyer Collateral Options
 
-The buyer collateral protects the buyer by giving them funds to challenge with. The initial collateral can be KYC, or this could be added to existing non-KYC exchanges for extra security.
+The buyer collateral protects the buyer by giving them funds to challenge with. The initial collateral can be KYC, or Know No Customer could be added to existing non-KYC exchanges for extra security.
 
 However, all the numbers above are arbitrary. People can choose their own risk, and the collateral can be chosen by the relevant parties.
 
-Suppose Alice buys 2 BTC from a friend for cash, and wants to purchase 5 BTC from a KNC exchange. She could make a request for 5 BTC, Bob will see her 2 BTC, and match it in the contract.
+Suppose Alice buys 2 BTC from a friend for cash, and wants to purchase 3 BTC from a KNC exchange. She could make a request for 3 BTC, Bob will see her 2 BTC, and match it in the contract.
 
-In this way, each 2 BTC could be used to challenge the other until the funds are empty. If the dispute is not settled, Bob will receive 3 BTC back from the purchased BTC, and Alice will get nothing.
+In this way, each 2 BTC could be used to challenge the other until the funds are empty. If the dispute is not settled, both participants will get nothing. 
 
-This would lead to a total loss of 4 BTC for Bob, and either 2 BTC (if Alice is evil), or 2 BTC + the price of 5 BTC if Alice is honest. 
+Therefore, it is on the seller to take this additional risk. Bob could end up losing 5 BTC (2 BTC collateral + 3 BTC purchase) and it only cost Alice 2 BTC. However, Alice could also lose the equivalent of 5 BTC (2 BTC collateral + 3 BTC payment value), and Bob would have the payment for the 3 BTC, costing him 2 BTC to be evil.
 
-This means the seller always has the same risk factor (losing 2x collateral), but if the buyer pays, they have an additional risk of losing the value of 2x collateral + the price of the unsecured BTC. 
+
+I imagine this additional risk would require a premium, and the market can figure out an acceptable price. It should only be used for smaller amounts.
 
 
 
